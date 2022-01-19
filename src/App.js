@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Search from './components/Search';
 import api from './apis/api';
@@ -16,28 +16,36 @@ const App = () => {
         q: searchFromSearch,
       },
     });
-    setVideos({ videos: response.data.items });
+    setVideos(response.data.items);
   };
 
   const handleVideoSelect = (video) => {
-    setSelectedVideo({ selectedVideo: video });
+    setSelectedVideo(video);
+    console.log(video);
   };
 
+  console.log(selectedVideo);
   return (
     <div className='app'>
-      <header>Video player</header>
       <div className='search'>
+        <h1>Video player</h1>
         <Search
           handleFormSubmit={handleFormSubmit}
           setSearch={setSearch}
           search={search}
         />
       </div>
-      <div className='detail'>
-        <Videodetail video={selectedVideo} />
-      </div>
-      <div className='list'>
-        <Videolist videos={videos} handleVideoSelect={handleVideoSelect} />
+      <div className='booth'>
+        <div className='video'>
+          <Videodetail
+            video={selectedVideo}
+            handleFormSubmit={handleFormSubmit}
+            handleVideoSelect={handleVideoSelect}
+          />
+        </div>
+        <div className='list'>
+          <Videolist videos={videos} handleVideoSelect={handleVideoSelect} />
+        </div>
       </div>
     </div>
   );
