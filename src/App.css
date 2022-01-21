@@ -7,8 +7,8 @@
 }
 
 .booth {
-  margin-top: -14px;
-  margin-left: 60px;
+  margin-top: -20px;
+  margin-left: 6px;
   display: flex;
   flex-direction: row;
 }
@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
   justify-content: right;
-  margin-left: 40px;
+  margin-left: -10px;
 }
 
 input {
@@ -54,8 +54,9 @@ input::placeholder {
 }
 
 .search {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background-color: #6362ab;
+  width: 100%;
 }
 
 iframe {
@@ -100,27 +101,36 @@ p {
 }
 
 .details {
-  width: 871px;
-  max-height: 300px;
+  width: 868px;
+  max-height: 380px;
   border: solid #3d4397 4px;
   border-radius: 30px;
   background-color: #6362ab;
+  margin-top: 4px;
+}
+
+.loading {
+  margin-top: 210px;
+  margin-left: 380px;
+  font-size: 30px;
+  color: #eaeafb;
 }
 
 @media (max-width: 1290px) {
   .app {
     display: flex;
-    width: 100%;
+    max-width: 100%;
     flex-direction: column;
     background-color: #1e1e1e;
     text-align: center;
   }
   .details {
-    max-width: 100%;
-    max-height: 300px;
-    border: solid #3d4397 3px;
+    width: 100%;
+    max-height: 380px;
+    border: solid #3d4397 4px;
     border-radius: 30px;
     background-color: #6362ab;
+    margin-top: 4px;
   }
   .video {
     display: flex;
@@ -129,7 +139,6 @@ p {
     margin-left: 0;
   }
   .booth {
-    margin-top: -10px;
     margin-left: 0px;
     display: flex;
     flex-direction: column;
@@ -140,14 +149,18 @@ p {
   .videos {
     width: 100%;
     background-color: #6362ab;
-    color: #1e1e1e;
+    color: #eaeafb;
     font-weight: bold;
+    margin-left: 40px;
     margin-bottom: 6px;
-    border: solid #3d4397 6px;
+    border: solid #3d4397 8px;
     border-radius: 8px;
     padding-bottom: 6px;
+    margin: auto;
+    margin-bottom: 6px;
   }
   .list {
+    width: 100%;
     margin-top: 20px;
     display: flex;
     flex-direction: column;

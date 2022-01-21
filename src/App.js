@@ -38,7 +38,7 @@ const App = () => {
       <div className='booth'>
         <div className='video'>
           <Videodetail
-            video={selectedVideo}
+            video={selectedVideo || videos[0]}
             handleFormSubmit={handleFormSubmit}
             handleVideoSelect={handleVideoSelect}
           />
