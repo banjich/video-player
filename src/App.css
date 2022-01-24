@@ -114,6 +114,7 @@ p {
   margin-left: 380px;
   font-size: 30px;
   color: #eaeafb;
+  margin-right: 347px;
 }
 
 @media (max-width: 1290px) {
@@ -166,5 +167,17 @@ p {
     flex-direction: column;
     justify-content: center;
     margin-left: 0px;
+  }
+  .loading {
+    width: 100%;
+    margin-top: 210px;
+    margin: auto;
+    font-size: 30px;
+    color: #eaeafb;
+  }
+  .search {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #6362ab;
   }
 }
